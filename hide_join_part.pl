@@ -38,5 +38,5 @@ sub hide_join_part {
 }
 
 Irssi::signal_add('message public', 'msg_public');
-Irssi::signal_add_first('message join', sub { hide_join_part('join', @_); });
-Irssi::signal_add_first('message part', sub { hide_join_part('part', @_); });
+Irssi::signal_add('message join', sub { hide_join_part('join', @_); });
+Irssi::signal_add('message part', sub { hide_join_part('part', @_); });
